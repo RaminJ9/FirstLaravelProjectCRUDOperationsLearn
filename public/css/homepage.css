@@ -4,9 +4,29 @@ body{
 }
 
 
+.input-typebutton{ /* WIll be default use of making a "a" into looking like a button */ 
+
+    display: inline-block; /* Allows padding and margin */
+    border: 1px solid black;
+    padding: 3px;
+    border-radius: 3px;
+    margin: 5px;
+    background-color: #0f2237;
+    color: #fff;
+    text-decoration: none;  /* Removes the line under the "a" link / refference */
+    cursor: pointer;
+    text-align: center;
+    font-weight: 600; /* how "bold" they look, like how are the letters */
+}
+.input-typebutton:hover {
+  background-color: #0056b3;
+}
+
+
 
 .container-header{
-
+    display: flex;
+    flex-direction: row;
 
 }
 

@@ -9,18 +9,11 @@ class ViewController extends Controller
     //
 
     public function register(){
-
-        
-
+        return view('Product.registerpage');
     }
-
-
 
     public function login(){
-
-
-
+        return view('Product.loginpage');
     }
-
 
 }

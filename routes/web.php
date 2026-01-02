@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ViewController;
 
 // this is the route part of the mvc, when u change the url, u get to a different part. based on the commands u make
 Route::get('/', function () { // this was already here, this is the welcome view, if there is nothing behind the url, this would be the default
@@ -33,3 +35,6 @@ Route::get('/register', [ViewController::class, 'register'])->name('show.registe
 Route::get('/login', [ViewController::class, 'login'])->name('show.login');
 
     // Authentication / methods
+Route::post('/register', [AuthController::class, 'register'])->name('try.register');
+Route::post('/login', [AuthController::class, 'login'])->name('try.login');
+Route::post('/logout', [AuthController::class, 'logout'])->name('try.logout');
