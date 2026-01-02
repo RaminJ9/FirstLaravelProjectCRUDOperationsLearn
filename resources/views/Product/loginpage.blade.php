@@ -13,7 +13,15 @@
         <div>
             <form action="{{route('try.login')}}" method="POST">
                 @csrf
-
+                @if($errors->any())
+                <div>
+                <ul>
+                    @foreach($errors->all() as $error)
+                        <li>{{$error}}</li>
+                    @endforeach
+                </ul>
+                </div>
+                @endif
                 <h2 class="text" >Log In to your account</h2>
                 <div >
                 <label class="text" for="email">Email:</label>

@@ -34,9 +34,24 @@ class AuthController extends Controller
     }
 
 
-    public function login(){
+    public function login(Request $request){
 
 
+        $validated = $request->validate([
+            'email' => 'required|email',
+            'password' => 'required|string'
+        ]);
+        
+        if(Auth::attempt($validated)){
+            $request->session()->regenerate(); // When authenticating a new session id will generate, so fixation attacks wont happen. its when an attacker uses a known session id to get hold of an account, but newly generating one fixes this. And keeps the session data.
+            return redirect()->route('goto.homepage');
+        }
+
+        // if it doesnt work, laravel throws exception and they also handle it themselves by passing it to the view.
+        // we will create a fixed error message.
+        throw ValidationException::withMessage([
+            'credentials' => 'Incorrect email or password.'
+        ]);
 
     }
 
