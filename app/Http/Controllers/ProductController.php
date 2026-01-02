@@ -13,7 +13,7 @@ class ProductController extends Controller
     //these 2 index and create are for return a view
     public function index()
     {
-        $product = Product::all(); // all of the data in the table called "Product" will be saved in $product
+        $product = Product::all(); // all of the data in the table / model called "Product" will be saved in $product
         return view('Product.index',['products' =>$product]);
     // [] part means that, inside the view we can use the variable "products" stored in the variable "$product", through the controller        
     }
