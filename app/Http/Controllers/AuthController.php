@@ -67,7 +67,7 @@ class AuthController extends Controller
         // this is recomended to do these 2 things, below and above, not HAVE to but common practice.
         $request->session()->regenerateToken();
 
-        return redirect()->route('show.login');
+        return redirect()->route('goto.homepage');
 
     }
 
