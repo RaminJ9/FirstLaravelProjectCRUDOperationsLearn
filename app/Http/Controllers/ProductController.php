@@ -10,18 +10,6 @@ class ProductController extends Controller
 {
     // controller part of the mvc
 
-    //these 2 index and create are for return a view
-    public function index()
-    {
-        $product = Product::all(); // all of the data in the table / model called "Product" will be saved in $product
-        return view('Product.index',['products' =>$product]);
-    // [] part means that, inside the view we can use the variable "products" stored in the variable "$product", through the controller        
-    }
-
-    public function create()
-    {
-        return view('product.create');
-    }
 
     // Request $request makes an object being "$request" and all of the data that is stored will be stored inside of it, ex ['name'=>'jack', 'ln'=>'sparrow']
     public function store(Request $request)
@@ -36,14 +24,6 @@ class ProductController extends Controller
         // saving it in $newProduct is not needed, since we dont end up using the variable for anything
         $newProduct = Product::create($data);
         return redirect(route('product.index'));
-    }
-
-    // it takes in a product to know which product to edit
-    // we take the product, from the Product model
-    // this is only used to change the data, to save it we use the update method below
-    public function edit(Product $product)
-    {
-        return view('product.edit',['product' => $product]);
     }
 
     // with the help of this method we can update the data of a product which we change with the edit function
