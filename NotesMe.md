@@ -33,4 +33,12 @@ The Action in the ProductController (is simply the name for the controller where
 
 ![Using MiddleWare](image-2.png)
 
-With the use of middleware, we can run some other code, before the controller action handles the request.
+With the use of middleware, we can run some whatever code we want to run, before the controller action handles the request.
+Once the middleware function has been run, you can let the request move onto the controller action if you want to, and the controller can do what it needs to do.
+
+<br>
+<br>
+
+![Redirection](image-3.png)
+But another possibility if the user isnt logged authorized, then the middleware can redirect them to another view instead of the "main" one.
+So by using middleware, we can make protected routes, which are only accessable with authorized access.
