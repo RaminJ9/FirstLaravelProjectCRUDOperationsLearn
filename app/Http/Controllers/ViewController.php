@@ -40,5 +40,9 @@ class ViewController extends Controller
     }
 
 
+    public function homepage(){
+        return view('Product.homepage');
+    }
+
 
 }

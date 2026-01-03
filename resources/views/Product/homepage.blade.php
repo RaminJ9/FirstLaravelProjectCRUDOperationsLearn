@@ -14,7 +14,7 @@
           
           <!-- The "guest" part is only visible if you arent authenticated. -->
           @guest
-          <a class="input-typebutton" href="{{route('show.login')}}">Log In</a>
+          <a class="input-typebutton" href="{{route('login')}}">Log In</a>
           <a class="input-typebutton" href="{{route('show.register')}}">Register Account</a>
           @endguest
 

@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash; // This facade, hashes the password, but it isnt needed since the "User" model that laravel makes, already hashes the password.
-
+use Illuminate\Validation\ValidationException;
 
 class AuthController extends Controller
 {
@@ -49,7 +49,7 @@ class AuthController extends Controller
 
         // if it doesnt work, laravel throws exception and they also handle it themselves by passing it to the view.
         // we will create a fixed error message.
-        throw ValidationException::withMessage([
+        throw ValidationException::withMessages([ // though the video says its "withMessage" it has been changed to "withMessages" so an extra "s" at the end when using laravel 12.
             'credentials' => 'Incorrect email or password.'
         ]);
 

@@ -10,7 +10,6 @@ class ProductController extends Controller
 {
     // controller part of the mvc
 
-
     // Request $request makes an object being "$request" and all of the data that is stored will be stored inside of it, ex ['name'=>'jack', 'ln'=>'sparrow']
     public function store(Request $request)
     {
