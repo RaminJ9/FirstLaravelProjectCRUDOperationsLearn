@@ -35,8 +35,6 @@ class AuthController extends Controller
 
 
     public function login(Request $request){
-
-
         $validated = $request->validate([
             'email' => 'required|email',
             'password' => 'required|string'
@@ -52,9 +50,7 @@ class AuthController extends Controller
         throw ValidationException::withMessages([ // though the video says its "withMessage" it has been changed to "withMessages" so an extra "s" at the end when using laravel 12.
             'credentials' => 'Incorrect email or password.'
         ]);
-
     }
-
 
     public function logout(Request $request){
 
