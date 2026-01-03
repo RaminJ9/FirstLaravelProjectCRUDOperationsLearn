@@ -5,3 +5,5 @@ the link, in the code i have written comments to help understand the code and la
 
 Authentication is also made but follows this playlist:
 https://www.youtube.com/playlist?list=PL4cUxeGkcC9iMeu6v8Y-bxhtIOzYcB2Ot
+
+This is made to understand the functionalities, if you want a good looking project this isnt it, make another one with that (Talking to my self if anyone else is reading).

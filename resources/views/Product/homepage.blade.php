@@ -31,9 +31,12 @@
     </header>
 
     <main>
+        @auth
         <div class="container-main">
             <a class="input-typebutton" href="{{route('product.index')}}">Go To Index</a>
         </div>
+        @endauth
+
     </main>
 
     <footer>
