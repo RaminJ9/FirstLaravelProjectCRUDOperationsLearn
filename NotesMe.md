@@ -13,7 +13,7 @@ MVC, is simply code architechture, it is a way to divide code in three parts. Mo
 
 **Controller**: This part of the code is like the brain / processer. it works as a connecter between the View and Model. It handles user trigger / system triggers (such as, button click, data loaded from model, selecting an option from dropdownbar). it detects events, decides what to do, and then tells the model or view how to act.
 
-![MVC Model Visual](Markdown-img\imagemvc.png)
+![alt text](image-1.png)
 
 
 ## MiddleWare
